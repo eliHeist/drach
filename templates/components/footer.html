@@ -1,0 +1,45 @@
+{% load static %}
+<!-- footer -->
+<footer class="bg-dark text-altlight">
+    <div class="container pt-5">
+        <div class="row justify-content-between">
+            <div class="col-4 d-flex align-items-center">
+                <figure>
+                    <img src="{% static 'assets/logo-orange-l.png' %}" alt="Drach Concepts Logo" class="img-fluid">
+                </figure>
+                <!-- <div class="vertical-border bg-primary mx-3"></div> -->
+                <ul class="list-unstyled border-left py-3 ps-3 ms-4">
+                    <a href="https://www.instagram.com/invites/contact/?i=1fb0fwdb511lk&utm_content=kax679u" class="link d-flex my-2"><i class="bi bi-instagram me-3 text-primary"></i>@drach_concept</a>
+                    <a href="https://twitter.com/drachconcepts?t=oRg-0AGFcS4zljA4KDyJXg&s=09" class="link d-flex my-2"><i class="bi bi-twitter me-3 text-primary"></i>@drach_concept</a>
+                </ul>
+            </div>
+            <div class="col-3 ">
+                <h2 class="display-6 text-white text-uppercase cursive">
+                    Links
+                </h2>
+                <ul class="list-unstyled d-flex flex-column">
+                    <a href="{% url 'main:homepage' %}" class="link my-1"><i class="bi bi-link me-3 text-primary"></i>Home</a>
+                    <a href="{% url 'main:gallery' %}" class="link my-1"><i class="bi bi-link me-3 text-primary"></i>Gallery</a>
+                    <a href="{% url 'main:aboutpage' %}" class="link my-1"><i class="bi bi-link me-3 text-primary"></i>About</a>
+                    <a href="{% url 'contacts:contactpage' %}" class="link my-1"><i class="bi bi-link me-3 text-primary"></i>Contact</a>
+                </ul>
+            </div>
+            <div class="col-3">
+                <h2 class="display-6 text-white text-uppercase cursive">Contact info</h2>
+                <ul class="list-unstyled">
+                    <li class="d-flex my-2"><i class="bi bi-geo-alt me-3 text-primary"></i><span>Makerere-Kikoni road,
+                            Princess Complex, Kasubi room S5</span></li>
+                    <li class="d-flex my-2"><i class="bi bi-telephone me-3 text-primary"></i><span>+256 704360041</span>
+                    </li>
+                    <li class="d-flex my-2"><i class="bi bi-envelope me-3 text-primary"></i><span>jdrachshots@gmail.com</span></li>
+                    <li class="d-flex my-2"><i class="bi bi-people me-3 text-primary"></i><span>@drach_concepts</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="rights p-3">
+        <h2 class="text-center small text-light">
+            All rights reserved Amartislab
+        </h2>
+    </div>
+</footer>

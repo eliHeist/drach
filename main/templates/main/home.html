@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block styles %}
+<style>
+    #banner{
+        background-image: url("{% static 'temp/bg/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg' %}");
+    }
+</style>
+{% endblock styles %}
+
+{% block title %}
+Epic <br> PHOTOGRAPHY
+{% endblock title %}
+
+{% block calltoaction %}
+<a href="{% url 'main:gallery' %}" class="btn btn-primary px-4 py-2 fw-bold">View Gallery</a>
+{% endblock calltoaction %}
+
+{% block content %}
+<section id="about" class="">
+    <div class="container py-5">
+        <div class="row py-5">
+            <div class="col-md-7 col-12 p-0">
+                <figure class="img-fill w-100 h-100 obs fade-in">
+                    <img src="static/temp/bg/helena-lopes-PGnqT0rXWLs-unsplash.jpg" alt="" class="cover">
+                </figure>
+            </div>
+            <div class="col-md-5 col-12 p-0 d-flex">
+                <article class="p-5 bg-white my-auto rounded-4 obs slide-in left">
+                    <h2 class="display-5 cursive obs fade-in">
+                        Drach Concepts
+                    </h2>
+                    <p class="lead obs fade-in">
+                        We are a photography company ...
+                    </p>
+                    <p class="lead obs fade-in">
+                        The quality of our photography is not dependent on the weather conditions or other external factors that usually tamper with image quality. We utilize high resolution digital cameras from various manufacturers including Kodak, Nikon, BenQ, JVC,Olympus, Sony, and Epson among others.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="whyus" class="bg-dark py-5 text-altlight">
+    <h2 class="display-4 cursive text-uppercase text-center text-primary py-5 obs fade-in">
+        Why us?
+    </h2>
+    <div class="container pb-5">
+        <div class="row">
+            <div class="col">
+                <figure class="rounded-4 p-5 bg-altdark h-100 text-center obs fade-in">
+                    <i class="bi bi-camera2 fs-1 text-primar"></i>
+                    <figcaption class="">High Resolution <br> Photos</figcaption>
+                </figure>
+            </div>
+            <div class="col">
+                <figure class="rounded-4 p-5 bg-altdark h-100 text-center obs fade-in">
+                    <i class="bi bi-printer-fill fs-1 text-primar"></i>
+                    <figcaption class="">High Quality <br> Print-outs</figcaption>
+                </figure>
+            </div>
+            <div class="col">
+                <figure class="rounded-4 p-5 bg-altdark h-100 text-center obs fade-in">
+                    <i class="bi bi-calendar-event-fill fs-1 text-primar"></i>
+                    <figcaption class="">All Event <br> Coverage</figcaption>
+                </figure>
+            </div>
+            <div class="col">
+                <figure class="rounded-4 p-5 bg-altdark h-100 text-center obs fade-in">
+                    <i class="bi bi-patch-check-fill fs-1 text-primar"></i>
+                    <figcaption class="">Exceptionally Skilled Photographers</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="gallery" class="bg-white pt-5">
+    <h2 class="display-3 text-center py-5 cursive obs fade-in">
+        Gallery
+    </h2>
+    <div class="">
+        <div class="cols-4">
+            <div class="img-fill obs fade-in">
+                <img src="static/images/IMG_20220407_135555_565.jpg" alt="" class="cover">
+            </div>
+            <div class="img-fill obs fade-in">
+                <img src="static/images/IMG_20220407_135606_465.jpg" alt="" class="cover">
+            </div>
+            <div class="img-fill obs fade-in">
+                <img src="static/temp/img/xgallery-4.jpg.pagespeed.ic.QadBNLWzH5.webp" alt="" class="cover">
+            </div>
+            <div class="img-fill obs fade-in">
+                <img src="static/images/IMG_20220407_135612_957.jpg" alt="" class="cover">
+            </div>
+            <div class="img-fill obs fade-in">
+                <img src="static/images/IMG_20220407_135616_695.jpg" alt="" class="cover">
+            </div>
+            <div class="img-fill obs fade-in">
+                <img src="static/temp/img/xgallery-1.jpg.pagespeed.ic.A_0Tb4URE3.webp" alt="" class="cover">
+            </div>
+            <div class="img-fill obs fade-in">
+                <img src="static/images/IMG_20220407_135620_309.jpg" alt="" class="cover">
+            </div>
+            <div class="img-fill obs fade-in">
+                <img src="static/images/IMG_20220407_135624_141.jpg" alt="" class="cover">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

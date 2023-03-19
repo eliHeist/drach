@@ -1,0 +1,134 @@
+@font-face {
+    font-family: Amatic SC Bold;
+    src: url(../fonts/AmaticSC-Bold.ttf);
+}
+@font-face {
+    font-family: Amatic SC Regular;
+    src: url(../fonts/AmaticSC-Regular.ttf);
+}
+body{
+    font-size: 1.1rem;
+    font-family: poppins;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.cursive-bold{
+    font-family: Amatic SC Regular;
+}
+.cursive{
+    font-family: Amatic SC Bold;
+}
+.vertical-border{
+    width: 4px;
+    height: 100%;
+}
+.border-left{
+    border-left: 4px solid rgb(0, 155, 251);
+}
+.navbar-brand img{
+    height: 5em;
+}
+.cols-4{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.snap{
+    scroll-snap-align: start;
+}
+
+.img-fill{
+    overflow: hidden;
+}
+img.cover{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#popup-alert{
+    width: fit-content;
+    text-align: center;
+    padding-left: 2em;
+    padding-right: 2em;
+    box-shadow: 0 .1em 1em .1em;
+    font-weight: 800;
+    position: fixed;
+    top: -4em;
+    z-index: 4;
+    margin: 0;
+    transition: all .5s ease-in;
+}
+#popup-alert.animate{
+    width: fit-content;
+    text-align: center;
+    padding-left: 2em;
+    padding-right: 2em;
+    font-weight: 800;
+    position: fixed;
+    top: 4em;
+    z-index: 4;
+    margin: 0;
+}
+
+#gallery img, #album img{
+    transform: scale(1);
+    transition: all .5s ease-in-out;
+}
+#gallery img:hover, #album img:hover{
+    transform: scale(1.1);
+}
+
+.p-relative{
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+#banner{
+    max-height: 100vh;
+    overflow: hidden;
+    
+}
+
+#about figure{
+    max-height: 70vh;
+}
+
+#about article{
+    margin-left: -100px;
+}
+
+footer figure img{
+    max-height: 15em;
+}
+
+.gototop {
+    position: fixed;
+    bottom:1.3em;
+    right: 1.3em;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+.gototop.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+#whyus figure i{
+    font-size: 20em;
+}

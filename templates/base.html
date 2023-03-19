@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Drach Concepts is a photography company located in Kampala Uganda, bringing expert photography and videography for all occassions">
+    <title>Drach Concepts
+    </title>
+    <link rel="shortcut icon" href="{% static 'assets/favicon.png' %}" type="image/png">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'css/obs.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fontawesome/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-icons/bootstrap-icons.css' %}">
+    {% block styles %}
+    {% endblock styles %}
+    <style>
+        body{
+            overflow-x: hidden;
+        }
+        #banner{
+            background-attachment: fixed;
+            background-size: cover;
+            height: 100vh;
+        }
+    </style>
+        
+</head>
+
+<body class="bg-light">
+    <!-- banner -->
+<section id="banner" class="pb-3 p-relative">
+    
+    {% block image %}
+    {% endblock image %}
+        
+    <div class="overlay d-flex flex-column">
+        <!-- header -->
+    {% include 'components/header.html' %}
+    <div class="container my-auto text-center text-white">
+        <span class="text-primary fw-bold"><i class="bi bi-dash-lg text-secondary"></i><i class="bi bi-plus text-secondary"></i> DRACH CONCEPTS <i class="bi bi-plus text-secondary"></i><i class="bi bi-dash-lg text-secondary"></i></span>
+        <h1 class="display-1 fw-bold cursive text-uppercase text-shadow">
+            {% block title %}
+            {% endblock title %}
+        </h1>
+        
+        {% block calltoaction %}
+        {% endblock calltoaction %}
+    </div>
+</div>
+</section>
+
+    <main class="">
+        {% block content %}
+        {% endblock content %}
+    </main>
+    {% include 'components/footer.html' %}
+    
+
+    <div class="gototop">
+		<a href="#topnav" class="js-gotop"><i class="bi bi-arrow-up-circle-fill fs-2"></i></a>
+	</div>
+
+    
+    {% block scripts %}
+    {% endblock scripts %}
+
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/obs.js' %}"></script>
+</body>
+
+</html>

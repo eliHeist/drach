@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block styles %}
+<style>
+    #banner{
+        background-image: url("{% static 'temp/bg/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg' %}");
+    }
+</style>
+{% endblock styles %}
+
+{% block title %}
+About Us
+{% endblock title %}
+
+{% block content %}
+<section id="aboutus" class="py-5">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <figure class="h-100 obs slide-in right">
+                    <img src="{% static 'temp/bg/tim-mossholder-hOF1bWoet_Q-unsplash.jpg' %}" alt="" class="cover">
+                </figure>
+            </div>
+            <div class="col-12 col-md-6">
+                <article class="p-4">
+                    <h2 class="display-5 cursive mb-3 obs fade-in">About us</h2>
+                    <p class="lead">
+                        DC was founded in 2022, since then we have grown to be bringing about....... <br> our works
+                        are modern, slick and clean with fresh developing styles adapted along the journey that
+                        has our signature ....
+                    </p>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="whyus" class="bg-altlight py-5">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <figure>
+                    <i class="bi bi-patch-question-fill obs slide-in bottom"></i>
+                </figure>
+            </div>
+            <div class="col-12 col-lg-8">
+                <h2 class="display-4 cursive mb-3 obs fade-in">Why us?</h2>
+                <p class="lead obs fade-in">
+                    Contracting us for your photography needs will be an assurance to you that your special event will be kept in remembrance and will be captured by our talented photographers using our superior quality digital cameras. The quality of our photographs are indisputable and will bring a true image of the event you remembered it; allowing you to view the images over generations to come. 
+                </p>
+                <p class="lead obs fade-in">
+                    The quality of our photography is not dependent on the weather conditions or other external factors that usually tamper with image quality. We utilize high resolution digital cameras from various manufacturers including Kodak, Nikon, BenQ, JVC,Olympus, Sony, and Epson among others. 
+                </p>
+                <p class="lead obs fade-in">
+                    Additionally, we use hi-resolution digital printers that produce high quality photographs that both you and your loved ones will enjoy. Not a single moment of the event will be missed by our professional photographers. With our professional equipment, each individual will shine like a real Hollywood Superstar.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+    

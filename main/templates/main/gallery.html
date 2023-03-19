@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'lightbox2/dist/css/lightbox.min.css' %}">
+<style>
+    #banner {
+        background-image: url("{% static 'temp/bg/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg' %}");
+    }
+
+    .container-xxxl {
+        max-width: 2500px;
+    }
+
+    a.event-link {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+    }
+</style>
+{% endblock styles %}
+
+
+{% block scripts %}
+<script src="{% static 'lightbox2/dist/js/lightbox-plus-jquery.min.js' %}"></script>
+{% endblock scripts %}
+
+{% block title %}
+Gallery
+{% endblock title %}
+
+{% block content %}
+<section id="album">
+    <div class="container">
+        <!-- <h2 class="display-3 text-center py-5 cursive">
+            Events
+        </h2> -->
+        <div class="row justify-content-center">
+
+
+
+        </div>
+    </div>
+    <div class="">
+        <div class="container-xxxl mx-auto">
+            <div class="cols-4">
+                <!-- events -->
+                {% for event in events %}
+                <div class="img-fill p-relative event obs fade-in">
+                    <a href="{{ event.featured_image.image.url }}" class="img-fill" data-lightbox="gallery">
+                        <img src="{{ event.featured_image.image.url }}" alt="{{ event.title }}" class="cover">
+                    </a>
+                    <a href="{% url 'events:detail' event.pk %}" class="event-link text-primary fw-bold text-decoration-none"><i class="bi bi-arrow-right-square-fill me- fs-2"></i>
+                    </a>
+                </div>
+                {% endfor %}
+                <!-- photos -->
+                {% for photo in photos %}
+                <a class="img-fill obs fade-in" href="{{ photo.image.url }}" data-lightbox="gallery">
+                    <img src="{{ photo.image.url }}" alt="" class="cover">
+                </a>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
